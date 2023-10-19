@@ -1,0 +1,7 @@
+header#header{left: 0;z-index: 98;}
+header#header form .field-container input{padding-top: 0.563rem;padding-bottom: 0.563rem;}
+header#header .dropdown .dropdown-toggle{width: 2.375rem;height: 2.375rem;}
+header#header .dropdown .dropdown-toggle::after{display: none;}
+@media (min-width: 768px){
+    header#header{left: 12.5rem;}
+}
