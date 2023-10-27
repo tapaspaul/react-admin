@@ -1,3 +1,4 @@
+import React from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import LeaderboardOutlinedIcon from '@mui/icons-material/LeaderboardOutlined';
@@ -23,7 +24,7 @@ const SideNav = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="employee-logs.html" className="d-flex align-items-center gap-1">
+                            <a href="#" className="d-flex align-items-center gap-1">
                                 <LeaderboardOutlinedIcon className="fs-lg" />
                                 <span className="d-block">Report</span>
                             </a>

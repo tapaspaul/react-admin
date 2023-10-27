@@ -1,10 +1,19 @@
-import './App.css';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Header from './components/Layout/Header/Header';
 import SideNav from './components/Layout/SideNav/SideNav';
 import CartProvider from './components/Store/CartProvider';
-// import InvestmentCalculator from './components/Views/InvestmentCalculator/InvestmentCalculator';
-// import PixelToRem from './components/Views/PxToRem/PixelToRem';
+import InvestmentCalculator from './components/Views/InvestmentCalculator/InvestmentCalculator';
+import PixelToRem from './components/Views/PxToRem/PixelToRem';
 import Meals from './components/Views/Meals/Meals';
+import './App.css';
+
+const router = createBrowserRouter([
+    { path: '/react-admin', element: <Meals /> },
+    { path: '/pix-to-rem', element: <PixelToRem /> },
+    { path: '/investment-calculator', element: <InvestmentCalculator /> }
+]);
+
 function App() {
     return (
         <div className="App">
@@ -13,9 +22,7 @@ function App() {
                     <SideNav />
                     <Header />
                     <div className="site-content">
-                        {/* <InvestmentCalculator /> */}
-                        {/* <PixelToRem /> */}
-                        <Meals />
+                        <RouterProvider router={ router } />
                     </div>
                 </CartProvider>
             </main>
