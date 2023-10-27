@@ -3,8 +3,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import SpaceDashboardOutlinedIcon from '@mui/icons-material/SpaceDashboardOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import Input from '../../UI/Input/Input';
 import Button from '../../UI/Buttons/Button';
 import Timer from './HeaderTimer';
+import HeaderNotification from './HeaderNotification';
 import HeaderCart from '../../Views/Cart/HeaderCart';
 import HeaderFullScreen from './HeaderFullScreen';
 import SwitchTheme from '../../Store/SwitchTheme';
@@ -20,7 +22,7 @@ const Header = () => {
                             <Button button={{ type: 'submit', className: 'bg-transparent p-0 border-0' }}>
                                 <SearchIcon className="fs-xl" />
                             </Button>
-                            <input type="search" className="form-control bg-transparent px-0 border-0" placeholder="Search" />
+                            <Input containerClass="flex-fill" input={{ type: 'search', className: 'form-control bg-transparent px-0 border-0', placeholder: 'Search' }} />
                         </div>
                     </form>
                 </div>
@@ -32,6 +34,7 @@ const Header = () => {
                         <SwitchTheme />
                         <HeaderFullScreen />
                         <HeaderCart />
+                        <HeaderNotification />
                         <Timer />
                         <div className="dropdown">
                             <Button button={{ type: 'button', className: 'btn p-0 border-0 dropdown-toggle', 'data-bs-toggle': 'dropdown', 'aria-expanded': 'false' }}>
