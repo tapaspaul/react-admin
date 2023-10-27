@@ -1,0 +1,4 @@
+.meals .meal .meal-content .meal-info .quantity .btn{padding: 0.313rem;}
+.meals .meal .meal-content .meal-info .quantity .btn.plus{border-top-left-radius: 0;border-bottom-left-radius: 0;}
+.meals .meal .meal-content .meal-info .quantity .btn.minus{border-top-right-radius: 0;border-bottom-right-radius: 0;}
+.meals .meal .meal-content .meal-info .quantity input[type="number"]{max-width: 3.125rem;padding: 0.438rem 0.625rem !important;}

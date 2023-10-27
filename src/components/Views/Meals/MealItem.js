@@ -15,16 +15,19 @@ const MealItem = props => {
         })
     }
     return(
-        <li id={props.id} className="mb-4">
-            <Card className="d-flex align-items-center gap-4">
-                <div className="meat-info">
-                    <h4>{ props.name }</h4>
-                    <p>{ props.description }</p>
-                    <p className="fs-lg fw-medium text-green">{price}</p>
+        <div id={props.id} className="meal col-sm-6 col-md-4 col-lg-3 mb-4">
+            <Card className="meal-content overflow-hidden">
+                <div className="img-container">
+                    <img src={props.image} className="img-fluid" alt={props.name} />
                 </div>
-                <MealQuantity id={props.id} onAddToCart={addToCartHandler} />
+                <div className="meal-info p-3">
+                    <h4>{ props.name }</h4>
+                    <p className="text-gray-600">{ props.description }</p>
+                    <p className="fs-lg fw-medium text-green">{price}</p>
+                    <MealQuantity id={props.id} onAddToCart={addToCartHandler} />
+                </div>
             </Card>
-        </li>
+        </div>
     )
 }
 export default MealItem;

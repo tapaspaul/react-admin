@@ -4,14 +4,15 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import SpaceDashboardOutlinedIcon from '@mui/icons-material/SpaceDashboardOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import Button from '../../UI/Buttons/Button';
-import HeaderFullScreen from './HeaderFullScreen';
 import Timer from './HeaderTimer';
 import HeaderCart from '../../Views/Cart/HeaderCart';
+import HeaderFullScreen from './HeaderFullScreen';
+import SwitchTheme from '../../Store/SwitchTheme';
 import './Header.css';
 import User from '../../../assets/img/user.png';
 const Header = () => {
     return(
-        <header id="header" className="bg-white position-fixed top-0 end-0 px-3 px-md-4 py-3 transition">
+        <header id="header" className="position-fixed top-0 end-0 px-3 px-md-4 py-3 transition">
             <div className="row align-items-center">
                 <div className="col-md-6 d-none d-md-block">
                     <form action="">
@@ -19,7 +20,7 @@ const Header = () => {
                             <Button button={{ type: 'submit', className: 'bg-transparent p-0 border-0' }}>
                                 <SearchIcon className="fs-xl" />
                             </Button>
-                            <input type="search" className="form-control px-0 border-0" placeholder="Search" />
+                            <input type="search" className="form-control bg-transparent px-0 border-0" placeholder="Search" />
                         </div>
                     </form>
                 </div>
@@ -28,6 +29,7 @@ const Header = () => {
                         <Button button={{ id: 'sideNavToggler', className: 'd-block d-md-none p-0 bg-transparent border-0' }}>
                             <MenuIcon />
                         </Button>
+                        <SwitchTheme />
                         <HeaderFullScreen />
                         <HeaderCart />
                         <Timer />
